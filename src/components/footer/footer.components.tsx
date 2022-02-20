@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ILinksGrid } from './footer.interfaces';
 import { socialMedia, pages } from './footer.data';

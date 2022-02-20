@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  Dispatch,
-  SetStateAction,
-  useRef,
-} from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -53,7 +47,7 @@ const FormComponent = ({ formRef, closeHandler }: IForm) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    // formState: { errors },
   } = useForm<IFormData>({
     resolver: yupResolver(schema),
   });
@@ -113,11 +107,7 @@ const FormComponent = ({ formRef, closeHandler }: IForm) => {
   let inpFile: any = null;
 
   const onChangeFile = async (e: any) => {
-    const file = e.currentTarget.files;
-    const options = {
-      maxSizeMB: 1,
-      maxWidthOrHeight: 1080,
-    };
+    console.log({ files: e.currentTarget.files });
   };
 
   const onSubmit = (data: IFormData) => {

@@ -1,8 +1,6 @@
 import GlobalStyles from 'src/components/global-styles/global-styles.components';
 import styled from 'styled-components';
 import FooterComponent from './components/footer/footer.components';
-import { gsap } from 'gsap';
-import { useRef, useState } from 'react';
 
 const AppContainer = styled.div`
   min-height: 100vh;
